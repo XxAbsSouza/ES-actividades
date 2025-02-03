@@ -1,0 +1,181 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+:root {
+    --color-light: #ffffff;
+    --color-dark: #000;
+    --color-primary: #006de9;
+    --color-secondary: #d9a65b;
+    --color-gray1: #484848;
+    --color-gray2: #9e9e9e;
+
+    --fs-titles: clamp(4rem, 5vw, 4rem);
+    --fs-subtitles: clamp(2rem, 4vw, 3rem);
+    --fs-text: 1rem;
+
+
+    --gap: 1rem;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    font-size: var(--fs-text);
+}
+
+.sr-only {
+    position: absolute ;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+  }
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------- INICIO HEADER ------- */
+
+.hero {
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 3, 22, 0.89), rgba(0, 4, 49, 0));
+    position: relative;
+    padding: 0 5%;
+    overflow: hidden;
+}  
+
+.backVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-page{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+/* INICIO NAVBAR */
+
+.logo {
+    margin: 2rem;
+    width: 7rem;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    --gap: 5rem;
+}
+
+.primary-navigation a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--color-light);
+    font-weight: 200;
+
+}
+
+@media (max-width: 35rem) {
+    .header-page {
+        justify-content: space-between;
+    }
+
+    .primary-navigation {
+        z-index: 1000;
+        --gap: 2.5rem;
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 5rem;
+        background: #20223f85;
+        backdrop-filter: blur(1rem);
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        overflow-x: hidden;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .primary-navigation a{
+        font-size: 1.6rem;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-color: transparent;
+        background-image: url("/images/icons/bars-svgrepo-com\ \(3\).svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 2rem;
+        border: none;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("/images/icons/close-svgrepo-com.svg");
+        background-size: cover;
+    }
+}
+
+/* FIM NAVBAR */
+
+.hero-content {
+    text-align: center;
+    color: var(--color-light);
+    text-wrap: wrap;
+}
+
+.hero-content  h1{
+        font-size: var(--fs-titles);
+        font-weight: 500;
+}
+
+.hero-content h2 {
+    font-size: var(--fs-subtitles);
+    font-weight: 300;
+}
+
+/* ------- FIM HEADER ------- */
+
+
+
