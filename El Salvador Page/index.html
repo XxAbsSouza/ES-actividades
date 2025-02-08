@@ -25,18 +25,16 @@
     
     <header>
         <div class="header-tittle">
-            <a class="navbar-brand" href="#">
-                <img src="/images/LOGO IGLESIA EL SALVADOR.png" alt="logo iglesia la voz de la piedra angular" height="70" class="d-none d-lg-block">
-              </a>
             <h1 class="fs-1">IGLESIA LA VOZ DE LA PIEDRA ANGULAR</h1>
         </div>
-        <div class="header header-page d-flex" id="navbar">
-            <div>
+        
+        <div class="navbar header-page d-flex align-items-center" id="navbar">
+            <div >
               <a class="header-logo" href="#"
                 ><img
                   src="images/LOGOIVPA.png"
                   alt="logo"
-                  class="logo"
+                  class="logo img-fluid"
               /></a>
             </div>
             <button
@@ -46,74 +44,44 @@
             >
               <span class="sr-only">Menu</span>
             </button>
-            <nav>
+            <nav class="header-nav">
               <ul
                 id="primary-navigation"
                 data-visible="false"
-                class="primary-navigation d-flex gap-4"
+                class="primary-navigation gap-4"
                 aria-disabled="true"
               >
                 <li>
-                  <a class="link" href="#actividades">ACTIVIDADES</a>
+                  <a class="" href="#actividades">ACTIVIDADES</a>
                 </li>
                 <li>
-                  <a class="link" href="#recomen">RECOMENDACIONES</a>
+                  <a class="" href="#direccion">DIRECCIÓN</a>
                 </li>
                 <li>
-                  <a class="link" href="#">HOTELES</a>
+                  <a class="" href="#hoteles">HOTELES</a>
                 </li>
                 <li>
-                  <a class="link" href="#">CONTACTO</a>
+                  <a class="" href="#registro">REGISTRO</a>
+                </li>
+                <li>
+                  <a class="" href="#contacto">CONTACTO</a>
                 </li>
               </ul>
             </nav>
         </div>
-        <!-- <nav class="navbar navbar-expand-lg py-2 py-lg-0  mt-4">
-            <div class="container px-4">
-                <a href="#"><img src="images/LOGO IGLESIA EL SALVADOR.png" alt="logo iglesia la voz de la piedra angular" height="45" class="d-block d-lg-none"></a>
-                    <button class="navbar-toggler border-0 navflex" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar" aria-controls="top-navbar">
-                            <i class="lni lni-dashboard-square-1"></i>
-                        </button>
-                  <div class="offcanvas offcanvas-end" tabindex="-1" id="top-navbar" aria-labelledby="top-navbarLabel">
-                    
-                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar" aria-controls="top-navbar">
-                        <div class="d-flex justify-content-between align-items-center p-3">
-                            <a href="#"><img src="images/LOGO IGLESIA EL SALVADOR.png" alt="Bootstrap" height="70"></a>
-                            <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #006de9;"></i>
-                        </div>
-                      </button>
-                      <ul class="navbar-nav ms-lg-auto p-4 p-lg-0 justify-content-around w-100 fs-5">
- 
-                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                            <a class="nav-link " aria-current="page" href="#actividades" 
-                            >ACTIVIDADES</a>
-                          </li>
-                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                            <a class="nav-link " aria-current="page" href="#direccion">DIRECCIÓN</a>
-                          </li>
-                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                            <a class="nav-link " aria-current="page" href="#hoteles">HOTELES</a>
-                          </li>
-                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                            <a class="nav-link " aria-current="page" href="#registro">REGISTRO</a>
-                          </li>
-                        <li class="nav-item px-3 px-lg-0 py-1 py-lg-4">
-                            <a class="nav-link " aria-current="page" href="#contacto">CONTACTO</a>
-                          </li>
-                      </ul>
-                  </div>
-
-            </div>
-        </nav> -->
-
-        <section class="container-fluid py-5 bg-hero hero justify-content-center align-items-center  d-flex">
+        <section class="container-fluid py-5 hero justify-content-center align-items-center  d-flex">
             <div class="container px-2">
                 <div class="row ">
                     <div class="col-md-12 text-center justify-content-center align-items-center  d-flex hero-text">
-                        <!-- <img src="images/location-svgrepo-com.svg" alt="logo iglesia la voz de la piedra angular"> -->
+                        <video autoplay loop muted class="backVideo">
+                            <source
+                              src="images/El Salvador Flag  Bandera de El Salvador  ROYALTY FREE [4K] 20 SEC LOOP - Royalty Free Content  No Copyright (720p, h264, youtube).mp4"
+                              type="video/mp4"
+                            />
+                          </video>
                         <h1 class="hero-text-act-general">Actividad general</h1>
-                        <h1 class="hero-text-sitio">Complejo deportivo BeSport</h1>
-                        <h2>Domingo 15 de marzo</h2>
+                        <h1 class="hero-text-sitio">Salamanca Eventos El Salvador</h1>
+                        <h2>Domingo 16 de marzo</h2>
                     </div>
                 </div>
             </div>
@@ -124,7 +92,7 @@
         <div class="container px-2">
             <div class="row ">
                 <div class="actividades-header text-center justify-content-center align-items-center  d-flex gap-4">
-                    <h1 class="">ACTIVIDADES</h1>
+                    <h1 class="hero-text-act-general">ACTIVIDADES</h1>
                     <img src="images/calendar-svgrepo-com.svg" alt="calendario">
                 </div>
                 
@@ -132,9 +100,6 @@
                     <div class="actividades-content justify-content-evenly align-items-center d-flex  py-5 mt-5">
                         <div class="actividades-text">
                             <h3 class="fs-1 fw-bold text-center pb-5">Iglesia La Voz de La Piedra Angular <br>(La Pirámide)</h3>
-                            <h3 class="fs-3 fw-bold">Viernes</h3>
-                            <h3 class="fs-3">Reunión General</h3>
-                            <p class="fs-4">Viernes, 14 de marzo <span class="fw-bold"> 05:00 pm</span></p>
                             <h3 class="fs-3 fw-bold mt-5 ">Sábado</h3>
                             <h3 class="fs-3">Reunión de Ministros</h3>
                             <p class="fs-4"> Sábado, 15 de marzo <span class="fw-bold">08:00 am</span></p>
@@ -144,14 +109,14 @@
                     <hr>
                     <div class="actividades-content justify-content-evenly align-items-center d-flex  py-5">
                         <div class="actividades-text">
-                            <h3 class="fs-1 fw-bold text-center pb-5">Complejo deportivo BeSport
+                            <h3 class="fs-1 fw-bold text-center pb-5">Salamanca Eventos El Salvador
                             <h3 class="fs-3 fw-bold">Domingo</h3>
                             <h3 class="fs-3">Actividad con El Dr. José Benjamín Pérez</h3>
-                            <p class="fs-4">Domingo, 16 de marzo <span class="fw-bold"> 08:00 am</span></p>
+                            <p class="fs-4">Domingo, 16 de marzo <span class="fw-bold"> 07:00 am</span></p>
                             
                         </div>
                         <div class="actividades-img">
-                            <img src="images/WhatsApp Image 2025-01-31 at 18.59.18 (2).jpeg" alt="iglesia reunion de ministros" class="img-fluid rounded-4"> 
+                            <img src="images/WhatsApp Image 2025-02-07 at 20.25.30.jpeg" class="img-fluid rounded-4"> 
                         </div> 
                     </div>
                 </div>
@@ -163,13 +128,13 @@
         <div class="container px-2">
             <div class="row ">
                 <div class="actividades-header text-center justify-content-center align-items-center  d-flex gap-4">
-                    <h1 class="">DIRECCIÓN</h1>
+                    <h1 class="hero-text-act-general">DIRECCIÓN</h1>
                     <img src="images/location-on-map-svgrepo-com.svg" alt="calendario">
                 </div>
                 <div class="actividades-body container-fluid d-flex justify-content-center align-items-center ">
                     <div class="actividades-content justify-content-evenly align-items-center d-flex  py-5 mt-5">
                         <div class="actividades-text">
-                            <h3 class="fs-1 fw-bold text-center mb-5">Viernes y Sábado</h3>
+                            <h3 class="fs-1 fw-bold text-center mb-5">Sábado</h3>
                             <p class="fs-4"><span class="fw-bold">Iglesia La Voz de La Piedra Angular</span> <br> Carretera Panamericana Km13, San Salvador Este, Distrito Ilopango, San Salvador, El Salvador </p>
                         </div>
                         <div class="actividades-img"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d432.04266790863375!2d-89.08949609168258!3d13.712221283406965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63481b87f20d43%3A0x4faa8d3b113dc5e3!2sIglesia%20La%20Voz%20De%20La%20Piedra%20Angular%20(La%20Piramide)!5e1!3m2!1spt-BR!2sbr!4v1738704155813!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div> 
@@ -179,7 +144,7 @@
                     <div class="actividades-content justify-content-evenly align-items-center d-flex  py-4">
                         <div class="actividades-text">
                             <h3 class="fs-1 fw-bold text-center mb-5 ">Domingo</h3>
-                            <p class="fs-4"> <span class="fw-bold">Iglesia La Voz de La Piedra Angular</span> <br>Carretera Panamericana Km13, San Salvador Este, Distrito Ilopango, San Salvador, El Salvador</p>
+                            <p class="fs-4"> <span class="fw-bold">Salamanca Eventos El Salvador</span> <br>Complejo Corporativo Salamanca, Calle a Huizúcar, Kilometro y Medio después de Nuevo Cuscatlán, Huizúcar, La Libertad, El Salvador.</p>
                         </div>
                         <div class="actividades-img"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.3192959208864!2d-89.25081879999999!3d13.6294151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f632d0f4c23a27f%3A0xcfb5c99cddb35e0d!2sSalamanca%20Eventos%20El%20Salvador!5e1!3m2!1spt-BR!2sbr!4v1738943683344!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div> 
                     </div>
@@ -238,9 +203,21 @@
                         <img src="images/phone-mobile-user-svgrepo-com.svg" alt="icon hotel" class="mb-5 mt-3">
                         <p class="fs-2 fw-bold">Para más informaciones o si tienes alguna duda, por favor contacte con nosotros.
                         </p>
-                        <a href="https://w.app/dp9mgf" target="_blank" class="btn btn-primary fw-bold"> <i class="fa-brands fa-whatsapp" style="color: #00c203;"></i>
-                            Hable con nosotros
-                        </a>
+                        <div class="d-flex gap-4 contatos">
+                            <a href="https://w.app/dp9mgf" target="_blank" class="btn btn-primary fw-bold"> 
+                                <i class="fa-brands fa-whatsapp" style="color: #00c203;"></i>
+                                Belén Romero 🇸🇻
+                            </a>
+                            <a href="https://w.app/xm9vur" class="btn btn-primary fw-bold" target="_blank"> 
+                                <i class="fa-brands fa-whatsapp" style="color: #00c203;"></i>
+                                Zaida Guzman 🇸🇻
+                            </a>
+                            <a href="https://w.app/rkrwh7" class="btn btn-primary fw-bold" target="_blank"> 
+                                <i class="fa-brands fa-whatsapp" style="color: #00c203;"></i>
+                                Samuel Escobar 🇸🇻
+                            </a>
+
+                        </div>
                     </div>
                 </div>
             </div>
