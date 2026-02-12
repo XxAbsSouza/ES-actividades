@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(98% 0.003 247.858);
+  --color-base-200: oklch(96% 0.007 247.896);
+  --color-base-300: oklch(92% 0.013 255.508);
+  --color-base-content: oklch(20% 0.042 265.755);
+  --color-primary: #112e5c;
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: #1E4E9E;
+  --color-secondary-content: #F4F6F8;
+  --color-accent: #C62828;
+  --color-accent-content: #F4F6F8;
+  --color-neutral: #F4F6F8;
+  --color-neutral-content: oklch(20% 0.042 265.755);
+  --color-info: #2563EB;
+  --color-info-content: oklch(98% 0.019 200.873);
+  --color-success: #2E7D32;
+  --color-success-content: oklch(98% 0.031 120.757);
+  --color-warning: #F9A825;
+  --color-warning-content: oklch(20% 0.042 265.755);
+  --color-error: #B71C1C;
+  --color-error-content: oklch(98% 0.003 247.858);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1.5px;
+  --depth: 1;
+  --noise: 1;
+}
+
+/* Fontes globais */
+:root {
+  --font-title: 'Montserrat', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --color-neutral: #F4F6F8;
+}
+
+/* Corpo do site */
+body {
+  font-family: var(--font-body);
+  color: #0B2D5C; /* exemplo da sua paleta */
+  line-height: 1.6;
+  background-image: url('/beige-paper.png'); 
+  background-repeat: repeat; 
+  background-size: auto;  
+  background-color: var(--color-neutral);
+}
+
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  letter-spacing: 0.5px; 
+}
