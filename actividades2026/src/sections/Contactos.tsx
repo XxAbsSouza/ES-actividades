@@ -25,10 +25,10 @@ const encargados = [
 
 export const Contactos = () => {
   return (
-    <section className="py-20 px-6">
+    <section id="contacto" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-normal uppercase tracking-wide text-primary mb-6">
             Encargados del Evento
           </h2>
           <p className="text-lg opacity-80 max-w-2xl mx-auto">
@@ -39,7 +39,7 @@ export const Contactos = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {encargados.map((persona, index) => {
-            const mensaje = `Hola hermano(a) ${persona.nombre}, Dios te bendiga! Te escribo porque tengo una duda acerca del evento.`;
+            const mensaje = `Hola ${persona.nombre}, ¡Dios te bendiga! Te escribo porque tengo una duda acerca del evento.`;
             const mensajeCodificado = encodeURIComponent(mensaje);
 
             // Alterna automaticamente

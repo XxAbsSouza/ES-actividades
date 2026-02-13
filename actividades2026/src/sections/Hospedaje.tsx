@@ -2,34 +2,43 @@ import React from "react";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 
-
-
 export const Hospedaje = () => {
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section
+      id="hospedaje"
+      className="relative py-20 px-6 bg-cover bg-center bg-fixed"
+      style={{
+        backgroundImage: "url('/registro-bg.jfif')",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-950/97 via-blue-900/60 to-blue-950/90 backdrop-blur-sm"></div>
+
+      <div className="relative z-10 max-w-6xl mx-auto text-neutral">
         {/* Título */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-normal uppercase tracking-wide text-primary text-center my-12">
+        <div className="mb-14 text-center">
+          <h2 className="text-3xl md:text-4xl font-normal uppercase tracking-wide text-white my-12">
             Información de Hospedaje
           </h2>
-          <p className="text-lg opacity-80 max-w-2xl mx-auto">
+
+          {/* MOBILE justify / DESKTOP center */}
+          <p className="text-lg opacity-90 max-w-2xl mx-auto text-justify md:text-center">
             Para los hermanos que deseen traer tiendas de campaña, se ha
             dispuesto un espacio específico para hospedaje.
           </p>
         </div>
 
-        {/* Conteúdo principal */}
+        {/* Cards (mantidos como estavam) */}
         <div className="grid md:grid-cols-2 gap-10 items-stretch">
           {/* Dirección */}
-          <div className="card bg-base-200 shadow-xl">
+          <div className="card bg-base-200 shadow-xl text-base-content">
             <div className="card-body">
               <div className="flex items-center">
                 <FaMapLocationDot className="mr-2 text-3xl text-secondary" />
-                <h3 className="card-title text-2xl mb-4 ">Ubicación</h3>
+                <h3 className="card-title text-2xl mb-4">Ubicación</h3>
               </div>
 
-              <p className="leading-relaxed">
+              <p className="leading-relaxed text-justify md:text-left">
                 <strong className="text-accent">
                   Desvío Cantón Ichanquezo
                 </strong>
@@ -40,7 +49,7 @@ export const Hospedaje = () => {
 
               <div className="divider"></div>
 
-              <p className="opacity-80">
+              <p className="opacity-80 text-justify md:text-left">
                 Recomendamos coordinar con anticipación para una mejor
                 organización.
               </p>
@@ -48,7 +57,7 @@ export const Hospedaje = () => {
           </div>
 
           {/* Contacto */}
-          <div className="card bg-base-200 shadow-xl">
+          <div className="card bg-base-200 shadow-xl text-base-content">
             <div className="card-body">
               <div className="flex items-center">
                 <IoLogoWhatsapp className="mr-2 text-4xl text-secondary" />
@@ -57,7 +66,7 @@ export const Hospedaje = () => {
                 </h3>
               </div>
 
-              <p className="mb-4">
+              <p className="mb-4 text-justify md:text-left">
                 Para más información sobre el hospedaje, comunicarse con:
               </p>
 
