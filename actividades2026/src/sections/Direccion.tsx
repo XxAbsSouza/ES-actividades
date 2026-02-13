@@ -1,6 +1,6 @@
 import React from "react";
-import { FaClock } from "react-icons/fa";
-import "./Direcciones.css";
+import { CiClock1, CiClock2 } from "react-icons/ci";
+import "./Fade.css";
 
 export const Direccion = () => {
   const actividades = [
@@ -61,7 +61,7 @@ export const Direccion = () => {
                     isRight ? "justify-end" : "justify-start"
                   }`}
                 >
-                  <FaClock className="text-accent" />
+                  <CiClock1 className="text-accent" />
                   <span className="font-medium text-accent">Hora SV:</span>
                   <span>{act.horaSV}</span>
                 </div>
@@ -71,7 +71,7 @@ export const Direccion = () => {
                     isRight ? "justify-end" : "justify-start"
                   }`}
                 >
-                  <FaClock className="text-secondary" />
+                  <CiClock2 className="text-secondary" />
                   <span className="font-medium text-secondary">Hora PR:</span>
                   <span>{act.horaPR}</span>
                 </div>
@@ -88,7 +88,7 @@ export const Direccion = () => {
 
         {/* Mapa */}
         <div className="flex flex-col gap-4 md:w-1/2 justify-between">
-          <p>Vea las rutas en tu app de preferencia:</p>
+          <p className="text-secondary">Vea las rutas en tu app de preferencia:</p>
           <div className="flex gap-4 justify-center md:justify-start">
             <a
               href={googleMapsLink}
