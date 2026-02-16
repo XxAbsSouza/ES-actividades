@@ -1,11 +1,10 @@
 import React from "react";
-import { CiClock1, CiClock2 } from "react-icons/ci";
 
 export const Direccion = () => {
   const actividades = [
-    { dia: "Viernes 24", horaSV: "4:00 pm", horaPR: "6:00 pm" },
-    { dia: "Sábado 25", horaSV: "7:00 am", horaPR: "9:00 am" },
-    { dia: "Domingo 26", horaSV: "7:00 am", horaPR: "9:00 am" },
+    { dia: "Viernes 24" },
+    { dia: "Sábado 25" },
+    { dia: "Domingo 26" },
   ];
 
   const direccion =
@@ -15,6 +14,9 @@ export const Direccion = () => {
     "https://www.google.com/maps/dir/?api=1&destination=Avenida+Juan+Pablo+II+y+Diagonal+Universitaria,+San+Salvador,+El+Salvador&hl=es";
 
   const wazeLink = "https://waze.com/ul?ll=13.70485,-89.19545&navigate=yes";
+
+  const whatsappChannel =
+    "https://whatsapp.com/channel/0029Vb4C0rZ96H4Tig0eXt03";
 
   return (
     <section id="evento" className="px-4 md:px-6 pt-20">
@@ -27,13 +29,27 @@ export const Direccion = () => {
         {/* DESCRIÇÃO */}
         <div className="max-w-2xl text-justify md:text-center space-y-3">
           <p>
-            Las actividades serán ministradas en el Palacio de Los Deportes
+            Todas las actividades serán realizadas en el Palacio de Los Deportes
             Carlos "El Famoso Hernández” INDES.
           </p>
 
           <p className="font-medium">
             <span className="text-accent">Dirección:</span> {direccion}
           </p>
+
+          <p className="mt-4 text-accent">
+            Los horarios serán informados únicamente a través del canal oficial
+            de WhatsApp.
+          </p>
+
+          <a
+            href={whatsappChannel}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary mt-4"
+          >
+            Ver horarios en WhatsApp
+          </a>
         </div>
 
         {/* GRID DE DÍAS */}
@@ -43,25 +59,9 @@ export const Direccion = () => {
               key={act.dia}
               className="bg-neutral/40 backdrop-blur-md p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
             >
-              <h3 className="text-lg font-semibold text-secondary mb-4">
+              <h3 className="text-lg font-semibold text-secondary">
                 {act.dia}
               </h3>
-
-              <div className="flex items-center justify-center gap-2 text-sm mb-2">
-                <CiClock1 className="text-accent" />
-                <span className="font-medium text-accent">Hora SV:</span>
-                <span>{act.horaSV}</span>
-              </div>
-
-              <div className="flex items-center justify-center gap-2 text-sm">
-                <CiClock2 className="text-secondary" />
-                <span className="font-medium text-secondary">Hora PR:</span>
-                <span>{act.horaPR}</span>
-              </div>
-
-              <p className="text-xs text-neutral-content/60 italic mt-4">
-                Todo sujeto a cambios
-              </p>
             </div>
           ))}
         </div>

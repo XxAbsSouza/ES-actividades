@@ -29,7 +29,7 @@ export const Contactos = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-normal uppercase tracking-wide text-primary mb-6">
-            Encargados del Evento
+            Contactos para más información
           </h2>
           <p className="text-lg opacity-80 max-w-2xl mx-auto">
             Para cualquier consulta adicional, pueden comunicarse con los

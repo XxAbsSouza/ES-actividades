@@ -1,6 +1,8 @@
 import React from "react";
 
 export const Registro = () => {
+  const whatsappChannel =
+    "https://whatsapp.com/channel/0029Vb4C0rZ96H4Tig0eXt03";
   return (
     <section id="registro" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
@@ -22,6 +24,18 @@ export const Registro = () => {
             La entrada al evento <span className="font-bold">NO</span> será por
             registro. La información oficial de ingreso será compartida más
             adelante a través del canal de WhatsApp.
+            <p className="mt-4 text-accent">
+              Los horarios serán informados únicamente a través del canal
+              oficial de WhatsApp.
+            </p>
+            <a
+              href={whatsappChannel}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary mt-4"
+            >
+              Ver horarios en WhatsApp
+            </a>
           </div>
 
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
