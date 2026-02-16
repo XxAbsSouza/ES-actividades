@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Registro = () => {
   const whatsappChannel =
     "https://whatsapp.com/channel/0029Vb4C0rZ96H4Tig0eXt03";
