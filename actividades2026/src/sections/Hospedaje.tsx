@@ -1,7 +1,56 @@
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 
+import { useEffect, useRef } from "react";
+
+import img1 from "../assets/1.jpeg";
+import img2 from "../assets/2.jpeg";
+
 export const Hospedaje = () => {
+    const Galeria = () => {
+      const carouselRef = useRef<HTMLDivElement>(null);
+
+      useEffect(() => {
+        const interval = setInterval(() => {
+          if (carouselRef.current) {
+            const width = carouselRef.current.clientWidth;
+            carouselRef.current.scrollLeft += width;
+
+            if (
+              carouselRef.current.scrollLeft >=
+              carouselRef.current.scrollWidth - width
+            ) {
+              carouselRef.current.scrollLeft = 0;
+            }
+          }
+        }, 4000);
+
+        return () => clearInterval(interval);
+      }, []);
+
+      return (
+        <div
+          ref={carouselRef}
+          className="carousel w-full rounded-xl overflow-hidden mb-6"
+        >
+          <div className="carousel-item w-full">
+            <img
+              src={img1}
+              className="w-full h-56 object-cover"
+              alt="Ubicación 1"
+            />
+          </div>
+          <div className="carousel-item w-full">
+            <img
+              src={img2}
+              className="w-full h-56 object-cover"
+              alt="Ubicación 2"
+            />
+          </div>
+        </div>
+      );
+    };
+
   return (
     <section
       id="hospedaje"
@@ -30,12 +79,17 @@ export const Hospedaje = () => {
         {/* Cards (mantidos como estavam) */}
         <div className="grid md:grid-cols-2 gap-10 items-stretch">
           {/* Dirección */}
-          <div className="card bg-base-200 shadow-xl text-base-content">
+          <div className="card bg-base-200 shadow-xl text-base-content overflow-hidden">
             <div className="card-body">
               <div className="flex items-center">
                 <FaMapLocationDot className="mr-2 text-3xl text-secondary" />
                 <h3 className="card-title text-2xl mb-4">Ubicación</h3>
               </div>
+
+              {/* Slider */}
+              <Galeria />
+
+              <div className="divider"></div>
 
               <p className="leading-relaxed text-justify md:text-left">
                 <strong className="text-accent">
@@ -46,9 +100,7 @@ export const Hospedaje = () => {
                 <br />A 46 km del lugar de las actividades
               </p>
 
-              <div className="divider"></div>
-
-              <p className="opacity-80 text-justify md:text-left">
+              <p className="opacity-80 text-justify md:text-left mt-4">
                 Recomendamos coordinar con anticipación para una mejor
                 organización.
               </p>
